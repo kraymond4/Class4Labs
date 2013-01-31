@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author kraymond4
  */
 public class RectangleController extends HttpServlet {
-
+    private static final String RESULT_PAGE = "results.jsp";
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and

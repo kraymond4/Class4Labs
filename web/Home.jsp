@@ -12,7 +12,7 @@
         <title>Home Page</title>
     </head>
     <body>
-        <h1 align="center">Hall O' Simple Calculators:</h1><br />
+        <h1 align="center">Simple Calculators:</h1><br />
         
         <form id="form1" name="form1" method="POST" action="CalculateArea.do">
             <h2>Rectangle's Area:</h2>
