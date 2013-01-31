@@ -18,6 +18,8 @@
             <h2>Rectangle's Area:</h2>
             Enter Length: <input type="text" name="length"><input/><br />
             Enter Width:  <input type="text" name="width"><input/>
+            <br/>
+            <input id="rectangleSubmit" name="rectangleSubmit" type="submit" value="Calcualte Area"><input/>
         </form>
     </body>
 </html>
