@@ -32,6 +32,9 @@ public class RectangleController extends HttpServlet {
     {
         response.setContentType("text/html;charset=UTF-8");
         
+        String lengthVal = request.getParameter("length");
+        String widthVal = request.getParameter("width");
+        
         
     }
 

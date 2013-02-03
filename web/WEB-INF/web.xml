@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>RectangleController</servlet-name>
-        <url-pattern>/RectangleController</url-pattern>
+        <url-pattern>Rectangle.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
