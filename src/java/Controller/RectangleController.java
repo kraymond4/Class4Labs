@@ -35,6 +35,8 @@ public class RectangleController extends HttpServlet {
         String lengthVal = request.getParameter("length");
         String widthVal = request.getParameter("width");
         
+        double anwser = Double.valueOf(lengthVal) * Double.valueOf(widthVal);
+        
         
     }
 
