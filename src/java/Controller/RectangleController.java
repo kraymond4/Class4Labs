@@ -6,6 +6,9 @@ package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
+import java.util.Set;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +39,30 @@ public class RectangleController extends HttpServlet {
         String lengthVal = request.getParameter("length");
         String widthVal = request.getParameter("width");
         
+        double anwser = 0;
         
+        double len = 0;
+        double wid = 0;
+        
+        String anAnwser = "";
+        
+        try
+        {
+            len = Double.valueOf(lengthVal);
+            wid = Double.valueOf(widthVal);
+            anwser = len * wid;
+            anAnwser = "" + anwser;
+        }catch(NumberFormatException nfe){
+             anAnwser = "Failed";
+        }
+        
+        String destination = "/results.jsp";
+        request.setAttribute("anwser", anAnwser);
+        
+        RequestDispatcher view = request.getRequestDispatcher(destination);
+        view.forward(request, response);
+        
+                
         
         
     }
