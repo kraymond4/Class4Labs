@@ -32,10 +32,11 @@ public class RectangleController extends HttpServlet {
     {
         response.setContentType("text/html;charset=UTF-8");
         
+        PrintWriter out = response.getWriter();
         String lengthVal = request.getParameter("length");
         String widthVal = request.getParameter("width");
         
-        double anwser = Double.valueOf(lengthVal) * Double.valueOf(widthVal);
+        
         
         
     }

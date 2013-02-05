@@ -19,7 +19,7 @@
             Enter Length: <input type="text" id="length" name="length"/><br />
             Enter Width:  <input type="text" id="width" name="width"/>
             <br/>
-            <input id="rectangleSubmit" name="rectangleSubmit" type="submit" value="Calculate"><input/>
+            <input id="rectangleSubmit" name="rectangleSubmit" type="submit" value="Calculate"/>
         </form>
     </body>
 </html>
