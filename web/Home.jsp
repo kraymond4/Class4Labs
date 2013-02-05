@@ -14,12 +14,12 @@
     <body>
         <h1 align="center">Simple Calculators:</h1><br />
         
-        <form id="form1" name="form1" method="POST" action="Rectangle.do">
+        <form id="form1" name="form1" method="POST" action="RectangleController">
             <h2>Rectangle's Area:</h2>
-            Enter Length: <input type="text" name="length"><input/><br />
-            Enter Width:  <input type="text" name="width"><input/>
+            Enter Length: <input type="text" id="length" name="length"/><br />
+            Enter Width:  <input type="text" id="width" name="width"/>
             <br/>
-            <input id="rectangleSubmit" name="rectangleSubmit" type="submit" value="Submit"><input/>
+            <input id="rectangleSubmit" name="rectangleSubmit" type="submit" value="Calculate"><input/>
         </form>
     </body>
 </html>
