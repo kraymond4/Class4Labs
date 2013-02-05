@@ -13,5 +13,11 @@
     </head>
     <body>
         <h1>Results</h1>
+        <%
+            String anwser = request.getAttribute("anwser").toString();
+            out.print(anwser);
+        %>
+        
+        <p><a href="Home.jsp">Back</a></p>
     </body>
 </html>
