@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
 import java.io.IOException;
@@ -29,9 +26,13 @@ public class CircleController extends HttpServlet
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException 
+    {
+        final double PI = 3.14159265359;
+        
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        
         try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<html>");
