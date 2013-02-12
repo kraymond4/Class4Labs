@@ -31,7 +31,7 @@
         <form id="form3" name="form3" method="POST" action="TriangleController">
             <h2>Triangle's Sides</h2>
             Enter a side: <input type="text" id="side1" name="side1" /><br/>
-            Then:<br/>
+            
             Enter the second side: <input type="text" id="side2" name="side2"/><br/>
            
             <input id="triangleSubmit" name="triangleSubmit" type="submit" value="Calculate" />
