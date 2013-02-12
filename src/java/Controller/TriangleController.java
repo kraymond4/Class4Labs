@@ -3,6 +3,7 @@ package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,14 +29,34 @@ public class TriangleController extends HttpServlet {
             throws ServletException, IOException 
     {
         response.setContentType("text/html;charset=UTF-8");
+        
         PrintWriter out = response.getWriter();
+        String side1Val = request.getParameter("side1");
+        String side2Val = request.getParameter("side2");
+       
+        double firstSide = 0;
+        double secondSide = 0;
+        double anwser = 0;
         
         
-        try {
-            
-        } finally {            
-            
+        
+        String anAnwser = "";
+        
+        try
+        {
+            firstSide = Double.valueOf(side1Val);
+            secondSide = Double.valueOf(side2Val);
+            anwser = Math.pow(firstSide, 2) * Math.pow(secondSide, 2) ;
+            anAnwser = "" + anwser;
+        }catch(NumberFormatException nfe){
+             anAnwser = "Failed";
         }
+        
+        String destination = "/results.jsp";
+        request.setAttribute("anwser", anAnwser);
+        
+        RequestDispatcher view = request.getRequestDispatcher(destination);
+        view.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

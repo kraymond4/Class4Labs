@@ -33,8 +33,7 @@
             Enter a side: <input type="text" id="side1" name="side1" /><br/>
             Then:<br/>
             Enter the second side: <input type="text" id="side2" name="side2"/><br/>
-            Or<br/>
-            Enter the hypotenuse: <input type="text" id="hypotenuse" name="hypotenuse"/><br/>
+           
             <input id="triangleSubmit" name="triangleSubmit" type="submit" value="Calculate" />
         </form>
     </body>
