@@ -13,9 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author kraymond4
+ * @author Kyle Raymond
  */
-public class CircleController extends HttpServlet {
+public class CircleController extends HttpServlet 
+{
 
     /**
      * Processes requests for both HTTP

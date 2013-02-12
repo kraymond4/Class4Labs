@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
 import java.io.IOException;
@@ -16,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author kraymond4
+ * @author Kyle Raymond
  */
 public class RectangleController extends HttpServlet {
     private static final String RESULT_PAGE = "results.jsp";
