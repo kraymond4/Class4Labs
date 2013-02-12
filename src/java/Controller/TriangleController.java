@@ -46,7 +46,7 @@ public class TriangleController extends HttpServlet {
         {
             firstSide = Double.valueOf(side1Val);
             secondSide = Double.valueOf(side2Val);
-            anwser = Math.pow(firstSide, 2) * Math.pow(secondSide, 2) ;
+            anwser = Math.sqrt( (Math.pow(firstSide, 2) * Math.pow(secondSide, 2)) ) ;
             anAnwser = "" + anwser;
         }catch(NumberFormatException nfe){
              anAnwser = "Failed";
