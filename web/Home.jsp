@@ -27,5 +27,15 @@
             Enter Radius: <input type="text" id="radius" name="radius" /><br/>
             <input id="circleSubmit" name="circleSubmit" type="submit" value="Calculate" />
         </form>
+        
+        <form id="form3" name="form3" method="POST" action="">
+            <h2>Triangle's Sides</h2>
+            Enter a side: <input type="text" id="side1" name="side1" /><br/>
+            Then:<br/>
+            Enter the second side: <input type="text" id="side2" name="side2"/><br/>
+            Or<br/>
+            Enter the hypotenuse: <input type="text" id="hypotenuse" name="hypotenuse"/><br/>
+            <input id="triangleSubmit" name="triangleSubmit" type="submit" value="Calculate" />
+        </form>
     </body>
 </html>
