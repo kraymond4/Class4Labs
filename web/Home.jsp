@@ -21,5 +21,11 @@
             <br/>
             <input id="rectangleSubmit" name="rectangleSubmit" type="submit" value="Calculate"/>
         </form>
+        
+        <form id="form2" name="form2" method="POST" action="CircleController">
+            <h2>Circle's Area:</h2>
+            Enter Radius: <input type="text" id="radius" name="radius" /><br/>
+            <input id="circleSubmit" name="circleSubmit" type="submit" value="Calculate" />
+        </form>
     </body>
 </html>
