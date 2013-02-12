@@ -4,9 +4,17 @@
         <servlet-name>RectangleController</servlet-name>
         <servlet-class>Controller.RectangleController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CircleController</servlet-name>
+        <servlet-class>Controller.CircleController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RectangleController</servlet-name>
         <url-pattern>/RectangleController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CircleController</servlet-name>
+        <url-pattern>/CircleController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
