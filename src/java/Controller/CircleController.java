@@ -3,6 +3,7 @@ package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,19 +34,28 @@ public class CircleController extends HttpServlet
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CircleController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CircleController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {            
-            out.close();
+        String radiusVal = request.getParameter("radius");
+        
+        double anwser = 0;
+        
+        double rad = 0;
+        
+        String anAnwser = "";
+        
+        try
+        {
+           rad = Double.valueOf(radiusVal);
+           anwser = PI * Math.pow(rad, 2);
+           anAnwser = "" + anwser;
+        }catch(NumberFormatException nfe){
+             anAnwser = "Failed";
         }
+        
+        String destination = "/results.jsp";
+        request.setAttribute("anwser", anAnwser);
+        
+        RequestDispatcher view = request.getRequestDispatcher(destination);
+        view.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
