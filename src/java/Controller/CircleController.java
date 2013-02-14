@@ -1,6 +1,7 @@
 
 package Controller;
 
+import Model.CircleModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -29,7 +30,7 @@ public class CircleController extends HttpServlet
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
-        final double PI = 3.14159265359;
+        
         
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
@@ -42,10 +43,12 @@ public class CircleController extends HttpServlet
         
         String anAnwser = "";
         
+        CircleModel cir = new CircleModel();
+        
         try
         {
            rad = Double.valueOf(radiusVal);
-           anwser = PI * Math.pow(rad, 2);
+           anwser = cir.CalculateArea(rad);
            anAnwser = "" + anwser;
         }catch(NumberFormatException nfe){
              anAnwser = "Failed";
