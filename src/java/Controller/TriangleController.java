@@ -1,6 +1,7 @@
 
 package Controller;
 
+import Model.TriangleModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -38,7 +39,7 @@ public class TriangleController extends HttpServlet {
         double secondSide = 0;
         double anwser = 0;
         
-        
+        TriangleModel tri = new TriangleModel();
         
         String anAnwser = "";
         
@@ -46,7 +47,7 @@ public class TriangleController extends HttpServlet {
         {
             firstSide = Double.valueOf(side1Val);
             secondSide = Double.valueOf(side2Val);
-            anwser = Math.sqrt( (Math.pow(firstSide, 2) * Math.pow(secondSide, 2)) ) ;
+            anwser = tri.CalculateThirdSide(firstSide, secondSide);
             anAnwser = "" + anwser;
         }catch(NumberFormatException nfe){
              anAnwser = "Failed";
