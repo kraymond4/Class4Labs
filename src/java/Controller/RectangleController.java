@@ -1,6 +1,7 @@
 
 package Controller;
 
+import Model.RectangleModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashSet;
@@ -43,11 +44,13 @@ public class RectangleController extends HttpServlet {
         
         String anAnwser = "";
         
+        RectangleModel rec = new RectangleModel();
+        
         try
         {
             len = Double.valueOf(lengthVal);
             wid = Double.valueOf(widthVal);
-            anwser = len * wid;
+            anwser = rec.CalculateArea(len, wid);
             anAnwser = "" + anwser;
         }catch(NumberFormatException nfe){
              anAnwser = "Failed";
